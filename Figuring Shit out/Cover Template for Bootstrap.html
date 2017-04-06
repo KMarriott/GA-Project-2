@@ -15,15 +15,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
-<!--  -->
+  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
   <!-- Custom styles for this template -->
-  <link href="/css/cover.css" rel="stylesheet">
+  <link href="cover.css" rel="stylesheet">
 
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-  <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -68,15 +68,12 @@
             </p>
             
             <div class="signinform">
-              <form class="form-signin" action="/login" method="POST">
+              <form class="form-signin" action="/login" method="post">
                 <h2 class="form-signin-heading">Sign in</h2>
-                
                 <label for="inputEmail" class="sr-only">Email address</label>
-                <input name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-               
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" value="remember-me"> Remember me
@@ -88,7 +85,7 @@
 
             <div class="signupform">
               <form class="form-signup" >
-                <h2 class="form-signup-heading" action="/signup" method="POST">Sign Up</h2>
+                <h2 class="form-signup-heading" action="/signup" method="post">Sign Up</h2>
                 
                 <label for="inputUsername" class="sr-only">Username</label>
                 <input name = "username" type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
@@ -104,8 +101,11 @@
 
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+
                 <br>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+
+                
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
               </form>
             </div>
 
@@ -132,8 +132,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/js/home-script.js"></script>
+    <script src="assets.js"></script>
   </body>
   </html>

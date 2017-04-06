@@ -1,0 +1,29 @@
+.main-container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.center-block { float: none }
+
+.container{
+	background: #e13345;
+}
+
+.header{
+	background: #ee0;
+	width: 75%;
+}
+
+.inside{
+	background: #b05b;
+	width: 75%;
+}
+
+
+.loginform{
+	width: 50px;
+}

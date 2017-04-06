@@ -8,14 +8,39 @@ View completed lessons on profile.
 
 Add new Lessons as an admin
 
-
-Wireframe:
+Wireframe / ERD:
 https://www.draw.io/#G0BxC4FPwSwu2da0IzQjB1V1FIOEE
 
 ------------------------
 
 Lessons stored in a JSON file
 
+Pages:
+/
+ > Homepage
+ > Log in is here
+ > Includes profile
+ > List avaliable lessons
+ > Allows user to update their profile
+ > Admins can add lessons
+
+/signup
+ > Seperate page
+ > Lets people make an account on database
+ > Add button for allowing admin/non admin account
+
+/lesson
+ > Use current lesson for reference
+ > Use last page for last page
+ > Lets you go back and forward/whatever page you want
+
+/quiz
+ > Use current lesson to define
+ > Use database to save answers?
+ > Return to homepage when complete
+
+
+---------------------
 
 
 User visits homepage.
@@ -33,21 +58,3 @@ Password
 After Logging in:
 Quizes to do
 Quizes Completed
-
-
-Homepage
-Login
-Sign Up
-	Login Page:
-	Lists lessons you can do
-
-Lesson:
-Gives a page of stuff to read.
-
-Quiz:
-Gives a quiz to take.
-Link back to home.
-
-
-
-
