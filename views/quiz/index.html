@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <!--  <link rel="icon" href="../../favicon.ico"> -->
 
-  <title>Cover Template for Bootstrap</title>
+  <title>Quiz</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -45,7 +45,9 @@
                 <h3 class="masthead-brand">Parenting Lessons</h3>
                 <nav>
                   <ul class="nav masthead-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+
                   <!-- <li><a href="#">Features</a></li>
                   <li><a href="#">Contact</a></li> -->
                 </ul>
@@ -59,27 +61,36 @@
               Lesson 1 Quiz
             </p>
             <div class="questions_container"> 
-              <p class="question">1. Question</p>
+              {{#data}}
+              <p class="question">{{Question}}</p>
               <ul class="answers">
-                <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Answer 1</label><br/>
-                <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Answer 2</label><br/>
-                <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Answer 3</label><br/>
-                <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Answer 4</label><br/>
-              </ul>
+               {{#Answers}}
+               <input type="radio" name="question{{index}}" value="{{@index}}" id="question{{@index}}"><label for="{{@index}}">{{.}}</label><br/>
+               {{/Answers}}
+             </ul>
+             {{/data}}
 
+             <button>submit</button>
 
-            </div>
-            <button>Prev</button><button>Next</button>
+             <br><br>
+           </div>
+           <form action="/quiz/prev/{{page}}" method="post">
+            <button name="next" value={{page}}>Prev</button>
+          </form>
 
-            <br>
+          <form action="/quiz/next/{{page}}" method="post">
+            <button name="next" value={{page}}>Next</button>
+          </form>
 
-            <button>Lesson</button>
+          <br>
 
-          </div>
-
-
+          <a href= "/Lesson"><button>Lesson</button></a>
 
         </div>
+
+
+
+      </div>
 
 <!--         <div class="mastfoot">
           <div class="inner">

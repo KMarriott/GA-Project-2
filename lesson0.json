@@ -1,0 +1,67 @@
+{
+	"id": 1,
+	"Lesson": {
+		"pages" : 
+		{
+			"page0" : {
+				"title": "Tuning In Parenting Course",
+				"subtitle": "Chapter One",
+				"text": "This course will introduce parents to mindful strategies for managing emotions inherent in parenting. Every parent is familiar with the overwhelming fear when the baby runs a high fever or the smoldering anger when faced with a teenager who has failed another class and is now being suspended for cutting class. Many parents find themselves involved in the court system due to the inability to handle the feelings that arise when they feel as though they are losing control. Mindfulness parenting is based on the <br>Mindfulness is the psychological process of bringing one's attention to the internal and external experiences occurring in the present moment while parenting. By focusing on the present moment, while calmly acknowledging ones feelings, thoughts and bodily sensations parents are better able to deal with the bumps and grinds of raising children. The skill of mindfulness is developed through the practice of meditation and other training. This practice can help reduce stress, anxiety, and negative emotions, cool yourself down when your temper flares, and sharpen your concentration skills.",
+				"last": false
+			},
+			"page1" : {
+				"title" : "A History of Mindfulness",
+				"subtitle" : "The History and Origins of Mindfulness",
+				"text" : "Mindfulness is a practice involved in various religious and secular traditions, from Hinduism and Buddhism to yoga and, more recently, non-religious meditation. People have been practicing mindfulness for thousands of years, whether by itself or as part of a larger tradition. This article will cover some of the Eastern traditions which have embraced mindfulness, as well as how it has become popular in the West.<br>In general, it can be said that mindfulness was mostly popularized in the East by religious and spiritual institutions, while in the West its popularity can be traced to particular people and secular institutions. Of course, even the secular tradition of mindfulness in the West owes its roots to Eastern religion and even certain practitioners of Eastern religions. This is where any discussion of the history of mindfulness should begin.<br>Before we begin, a quick note – some commentators argue that the history of mindfulness should not be reduced to Buddhism and Hinduism, as mindfulness also has roots in Judaism, Christianity, and Islam (Trousselard et al., 2014). That said, most modern Western practitioners and teachers of mindfulness learned about mindfulness in the Buddhist and Hindu tradition, so this article will focus on mindfulness from a Buddhist and Hindu perspective. This should not be taken as a denial of mindfulness’s roots in the other religions, and interested readers are encouraged to seek out information about mindfulness as it pertains to these other religions. One possible starting point comes from Leisa Aitken, a clinical psychologist and practicing Christian, though this is just one of many options.",
+				"last": false
+			},
+			"page2" : {
+				"title" : "Research on Mindfulness",
+				"subtitle" : "",
+				"text" : "Stress reduction is often an effect of mindfulness practice, but the ultimate goal isn’t meant to be stress reduction. The goal of mindfulness is to wake up to the inner workings of our mental, emotional, and physical processes<br>Mindfulness boosts creativity: Whether it’s writing, drawing, or coloring, they all have accompanying meditative practices. We can also apply mindfulness to the creative process.<br>Mindfulness strengthens neural connections: By training our brains in mindfulness and related practices, we can build new neural pathways and networks in the brain, boosting concentration, flexibility, and awareness. Well-being is a skill that can be learned.  Try this basic meditation to strengthen neural connections.",
+				"last": false
+			},
+			"page3" : {
+				"title" : "How to Meditate",
+				"subtitle" : "A Simple Meditation Practice",
+				"text" : "Sit comfortably. Find a spot that gives you a stable, solid, comfortable seat.<br>Notice what your legs are doing. If on a cushion, cross your legs comfortably in front of you. If on a chair, rest the bottoms of your feet on the floor.<br>Straighten your upper body—but don’t stiffen. Your spine has natural curvature. Let it be there.<br>Notice what your arms are doing. Situate your upper arms parallel to your upper body. Rest the palms of your hands on your legs wherever it feels most natural.<br>Soften your gaze. Drop your chin a little and let your gaze fall gently downward. It’s not necessary to close your eyes. You can simply let what appears before your eyes be there without focusing on it.<br>Feel your breath. Bring your attention to the physical sensation of breathing: the air moving through your nose or mouth, the rising and falling of your belly, or your chest.<br>Notice when your mind wanders from your breath. Inevitably, your attention will leave the breath and wander to other places. Don’t worry. There’s no need to block or eliminate thinking. When you notice your mind wandering gently return your attention to the breath.<br>Be kind about your wandering mind. You may find your mind wandering constantly—that’s normal, too. Instead of wrestling with your thoughts, practice observing them without reacting. Just sit and pay attention. As hard as it is to maintain, that’s all there is. Come back to your breath over and over again, without judgment or expectation.<br>When you’re ready, gently lift your gaze (if your eyes are closed, open them). Take a moment and notice any sounds in the environment. Notice how your body feels right now. Notice your thoughts and emotions.",
+				"last": true
+			}
+		},
+		"quiz" : {
+			"question0" : {
+				"Question" : "When practicing mindfulness, what’s the best posture to adopt?",
+				"Answers" : [
+					"Sitting upright", 
+					"Lying down on your back",
+					"Standing up",
+					"All of the above"
+				],
+				"last": false
+
+			},
+			"question1" : {
+				"Question" : "What is the best advice for a beginner?",
+				"Answers" : [
+					"Note all of the sensations you experience",
+					"Listen to loud rock music on some headphones",
+					"Try your hardest to relax",
+					"Practice mindfulness after a heavy meal"
+				],
+				"last": false
+
+			},
+			"question0" : {
+				"Question" : "To become a better practitioner of mindfulness, you must",
+				"Answers" : [
+					"Make each session last a minimum of an hour",
+					"Practice regularly",
+					"Do something energetic immediately after a session",
+					"Aim to fall asleep during practice"
+				],
+				"last": false
+			}	
+		}
+
+	}
+}

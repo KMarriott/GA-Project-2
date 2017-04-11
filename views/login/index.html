@@ -46,6 +46,8 @@
                 <nav>
                   <ul class="nav masthead-nav">
                     <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/users">Admin</a></li>
+                    <li><a href="/logout">Logout</a></li>
                   <!-- <li><a href="#">Features</a></li>
                   <li><a href="#">Contact</a></li> -->
                 </ul>
@@ -62,15 +64,21 @@
 
               <div class="profile">
                 <ul>
-                  <li>Image</li>
-                  <li>Username</li>
-                  <li>First Name Last Name </li>
+                  <li><img class = 'profileimage' src={{image}}></li>
+                  <li>Welcome {{username}}!</li>
+                  <li>{{fname}} {{lname}} </li>
                   <br>
-                  <li><a>Update Profile</a></li>
+
+                  <li>
+                    <form class="form-signin"  action="/updaterandimage?_method=PUT" method="POST">
+                      <button class ='imagebtn' name = 'randimage' value = '0' type = 'submit'> New Image </button>
+                    </form>
+                  </li>
+                  <li><button class = 'updatebtn'>Update Profile</button></li>
                 </ul>
 
                 <div class="update_container">
-                  <form class="form-signin" action="/update?_method=PUT" method="POST">
+                  <form class="form-signin" action="/update?_method=PUT" method="POST" >
                     <h2 class="form-signin-heading">Update</h2>
 
                     <label for="inputEmail" class="sr-only">Email address</label>
@@ -88,8 +96,8 @@
               <div class = 'lessons'>
                 Lessons
                 <ul>
-                  <li><a>Lesson 1</a></li>
-                  <li><a>Lesson 2</a></li>
+                  <li><a href="/lesson">Lesson 1</a></li> - <a href= "/quiz">Quiz 1</a>
+                  <!-- <li><a>Lesson 2</a></li> -->
                 </ul>
               </div>
 

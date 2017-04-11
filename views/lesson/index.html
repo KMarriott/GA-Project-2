@@ -45,31 +45,42 @@
                 <h3 class="masthead-brand">Parenting Lessons</h3>
                 <nav>
                   <ul class="nav masthead-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                  <!-- <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li> -->
-                </ul>
-              </nav>
-            </div>
-          </div>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+<!-- <li><a href="#">Features</a></li>
+  <li><a href="#">Contact</a></li> -->
+</ul>
+</nav>
+</div>
+</div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Lesson 1</h1>
-            <p class="lead">
-              Lesson 1 Reading
-              </p>
-              <div class="reading"> Text Box Here</div>
-              <button>Prev</button><button>Next</button>
+<div class="inner cover">
+  <h1 class="cover-heading">{{title}}</h1>
+  <p class="lead">
+    {{subtitle}}
+  </p>
+  <div class="reading">
+    <p>
+      {{text}}
+    </p>
+  </div>
+  <form action="/lesson/prev/{{page}}" method="post">
+    <button name="prev" class = 'prevbtn' value={{page}}>Prev</button>
+  </form>
 
-              <br>
+  <form action="/lesson/next/{{page}}" method="post">
+    <button name="next" class = 'nextbtn' value={{page}} last = {{last}}>Next</button>
+  </form>
 
-              <button>Quiz</button>
+  <br><br>
 
-            </div>
+  <a href= "/quiz"><button name=quiz>Quiz</button></a>
+
+</div>
 
 
 
-          </div>
+</div>
 
 <!--         <div class="mastfoot">
           <div class="inner">

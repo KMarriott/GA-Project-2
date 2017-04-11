@@ -33,9 +33,25 @@ CREATE TABLE user_lessons (
 	user_id INT UNIQUE REFERENCES users(id) 
 	ON UPDATE CASCADE 
 	ON DELETE CASCADE NOT NULL,
-	lesson_1_id INT UNIQUE REFERENCES lessons(id)
+	lesson_id INT UNIQUE REFERENCES lessons(id)
 	ON UPDATE CASCADE 
 	ON DELETE CASCADE NOT NULL,
-	lesson_1_status BOOLEAN NOT NULL
+	status BOOLEAN NOT NULL,
+	last_page INT NOT NULL
 );
 
+CREATE TABLE user_quizes (
+	id SERIAL PRIMARY KEY,
+	user_id INT UNIQUE REFERENCES users(id) 
+	ON UPDATE CASCADE 
+	ON DELETE CASCADE NOT NULL,
+	lesson_id INT UNIQUE REFERENCES lessons(id)
+	ON UPDATE CASCADE 
+	ON DELETE CASCADE NOT NULL,
+	status BOOLEAN NOT NULL,
+	answer_given TEXT NOT NULL,
+	correct BOOLEAN NOT NULL,
+	last_page INT NOT NULL
+);
+
+INSERT INTO lessons(name, file, active) VALUES ('first lesson', '/lesson0', true);			
