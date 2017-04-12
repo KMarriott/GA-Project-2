@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <!--  <link rel="icon" href="../../favicon.ico"> -->
 
-  <title>Cover Template for Bootstrap</title>
+  <title>Home</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -55,57 +55,46 @@
             </div>
           </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Welcome!</h1>
-            <p class="lead">
-              This is a simple cover page for our website.
-              <br>
-              <br>
+          <div class="profile">
+            <ul>
+              <h1 class="cover-heading">Welcome {{fname}}!</h1>
+              <li><img class = 'profileimage' src={{image}}></li>
+              <form class="form-signin"  action="/updaterandimage?_method=PUT" method="POST">
+                <button class ='imagebtn btn topbtn' name = 'randimage' value = '0' type = 'submit'> <a> New Avatar </a> </button>
+              </form>
+              <button class = 'updatebtn btn'><a>Update Profile</a></button>
+              <div class="update_container default_width_btn">
+                <form class="form-signin" action="/update?_method=PUT" method="POST" >
+                  <label for="inputEmail" class="sr-only">Email address</label>
+                  <input name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
 
-              <div class="profile">
-                <ul>
-                  <li><img class = 'profileimage' src={{image}}></li>
-                  <li>Welcome {{username}}!</li>
-                  <li>{{fname}} {{lname}} </li>
-                  <br>
+                  <label for="inputPassword" class="sr-only">Password</label>
+                  <input name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
-                  <li>
-                    <form class="form-signin"  action="/updaterandimage?_method=PUT" method="POST">
-                      <button class ='imagebtn' name = 'randimage' value = '0' type = 'submit'> New Image </button>
-                    </form>
-                  </li>
-                  <li><button class = 'updatebtn'>Update Profile</button></li>
-                </ul>
-
-                <div class="update_container">
-                  <form class="form-signin" action="/update?_method=PUT" method="POST" >
-                    <h2 class="form-signin-heading">Update</h2>
-
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
-                  </form>
-                </div>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+                </form>
 
               </div>
-              <br>
-              <div class = 'lessons'>
-                Lessons
-                <ul>
-                  <li><a href="/lesson">Lesson 1</a></li> - <a href= "/quiz">Quiz 1</a>
-                  <!-- <li><a>Lesson 2</a></li> -->
-                </ul>
-              </div>
+              <li><button class = "btn default_width_btn bot lesson_btn">Lessons</button></li>
+              <div class="list_lessons"><li><button class = "btn"><a href="/lesson">Lesson 1</a></button> <button class = "btn"><a href= "/quiz">Quiz</a></button></ul></li></div>
+            </ul>
 
-              
+            <ul>
+
+            </ul>
 
 
 
-            </div>
+
+          </div>
+          <br>
+
+
+
+
+
+
+          <!-- </div> -->
 
 <!--         <div class="mastfoot">
           <div class="inner">

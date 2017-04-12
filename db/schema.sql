@@ -48,10 +48,9 @@ CREATE TABLE user_quizes (
 	lesson_id INT UNIQUE REFERENCES lessons(id)
 	ON UPDATE CASCADE 
 	ON DELETE CASCADE NOT NULL,
-	status BOOLEAN NOT NULL,
+	question_num INT,
 	answer_given TEXT NOT NULL,
-	correct BOOLEAN NOT NULL,
-	last_page INT NOT NULL
+	correct BOOLEAN NOT NULL
 );
 
 INSERT INTO lessons(name, file, active) VALUES ('first lesson', '/lesson0', true);			

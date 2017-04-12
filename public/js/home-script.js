@@ -4,6 +4,7 @@ $('.signinform').hide()
 $('.signupform').hide()
 $('.update_container').hide()
 $('.updateuser').hide()
+$('.list_lessons').hide()
 
 $(document).ready(function(){
 
@@ -42,15 +43,24 @@ $(document).ready(function(){
 		$('.updateuser').show()
 	})
 
+	$('.quizsubmit').on('click', function(){
+		$('.nextbtn').trigger("click")
+	})
+
+
+	$('.lesson_btn').on('click', function(){
+		$('.list_lessons').toggle("click")
+	})
 
 	if($('.prevbtn').attr('value')==="0"){
 		console.log('first page')
 		$('.prevbtn').hide()
 	}
 
-		if($('.nextbtn').attr('last')==="true"){
+	if($('.nextbtn').attr('last')==="true"){
 		console.log('last page')
 		$('.nextbtn').hide()
 	}
-})
 
+})
+	

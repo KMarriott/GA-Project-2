@@ -36,6 +36,15 @@ let db = pgp(
   password: 'password'
 })
 
+db.one("SELECT * FROM lessons")
+.then(function(data){
+lesson0.id = data.id
+console.log(lesson0.id)
+}).then(function(){
+
+
+
+
 
 app.get('/', function(req, res){
   if(req.session.user){
@@ -124,8 +133,8 @@ app.get('/lesson', function(req, res){
         subtitle: lessondata.subtitle,
         text: lessondata.text
       }
-    res.render('lesson/index', pagesetup);
-  })  
+      res.render('lesson/index', pagesetup);
+    })  
   }
   else
     {res.redirect('/')}
@@ -143,9 +152,12 @@ app.get('/quiz', function(req, res){
     .then(function(data){
       console.log(data.current_lesson)
 
+
       pagesetup = {
         page: 0,
-        data: lessondata
+        data: lessondata,
+        lesson_id: lesson0.id
+
       }
 
       res.render('quiz/index', pagesetup);
@@ -175,7 +187,8 @@ app.post('/quiz/next/:page', function(req, res){
 
     pagesetup = {
       page: next_page,
-      data: lessondata
+      data: lessondata,
+      lesson_id: lesson0.id
     }
 
     res.render('quiz/index', pagesetup);
@@ -202,12 +215,14 @@ app.post('/lesson/next/:page', function(req, res){
     lessondata = lesson0.Lesson.pages['page'+next_page]
 
     pagesetup = {
-      page:  next_page ,
+      page:  next_page,
       title: lessondata.title,
       subtitle: lessondata.subtitle,
       text: lessondata.text,
-      last: lessondata.last
+      last: lessondata.last,
+      lesson_id: lesson0.id
     }
+
 
     res.render('lesson/index', pagesetup);
   })
@@ -237,7 +252,8 @@ app.post('/lesson/prev/:page', function(req, res){
       title: lessondata.title,
       subtitle: lessondata.subtitle,
       text: lessondata.text,
-      last: lessondata.last
+      last: lessondata.last,
+      number: lessondata.number
     }
 
 
@@ -266,25 +282,38 @@ app.post('/quiz/prev/:page', function(req, res){
 
     pagesetup = {
       page: next_page,
-      data: lessondata
+      data: lessondata,
+      lesson_id: lesson0.id
     }
 
     res.render('quiz/index', pagesetup);
   })
 });
 
-app.post('/quiz/submit/:id', function(req, res){
+app.post('/quiz/submit/:lesson_id/:question', function(req, res){
 
-  id = req.params.id
+  lesson_id = req.params.lesson_id
+  question_num = req.params.question
+  // console.log(req.body)
 
+  let correct = false;
+  let lessondata = lesson0.Lesson.quiz.question0
+
+  if(req.body.answer === lessondata.correct){
+    correct=true
+  } 
+
+  console.log(correct)
 
   db
-  .none("INSERT INTO user_quizes(user_id, lesson_id, status, answer_given, correct, last_page) VALUES()", [req.session.user.email])
+  .none("INSERT INTO user_quizes(user_id, lesson_id, question_num, answer_given, correct) VALUES($1, $2, $3, $4, $5)",
+    [req.session.user.id, lesson_id, question_num, req.body.answer, correct])
   .catch(function(e){
-
+    console.log(e)
   })
   .then(function(data){
-    res.render('/');
+    res.redirect('back');
+    console.log("added")
   })
 });
 
@@ -330,7 +359,7 @@ app.put('/updaterandimage', function(req, res){
 //     });
 //   });
 
-        
+
 app.get('/logout', function(req, res){
   req.session.user = false;
   res.redirect("/");
@@ -429,3 +458,6 @@ app.put('user/update/:id', function(req, res){
       // res.send('User updated.');
     });
   });
+
+
+})

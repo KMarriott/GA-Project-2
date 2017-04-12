@@ -45,7 +45,7 @@
                 <h3 class="masthead-brand">Parenting Lessons</h3>
                 <nav>
                   <ul class="nav masthead-nav">
-                  <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="/logout">Logout</a></li>
 
                   <!-- <li><a href="#">Features</a></li>
@@ -59,18 +59,26 @@
             <h1 class="cover-heading">Lesson 1</h1>
             <p class="lead">
               Lesson 1 Quiz
+
             </p>
             <div class="questions_container"> 
-              {{#data}}
-              <p class="question">{{Question}}</p>
-              <ul class="answers">
-               {{#Answers}}
-               <input type="radio" name="question{{index}}" value="{{@index}}" id="question{{@index}}"><label for="{{@index}}">{{.}}</label><br/>
-               {{/Answers}}
-             </ul>
-             {{/data}}
 
-             <button>submit</button>
+              <form action="/quiz/submit/{{lesson_id}}/{{data.Number}}" method="post">
+                {{#data}}
+                <p class="question">{{Question}}</p>
+                <ul class="answers">
+                 <input type="radio" name="answer" value="A" id="question{{@index}}"><label for="{{@index}}">{{Answers.A}}</label><br/>
+                 <input type="radio" name="answer" value="B" id="question{{@index}}"><label for="{{@index}}">{{Answers.B}}</label><br/>
+                 <input type="radio" name="answer" value="C" id="question{{@index}}"><label for="{{@index}}">{{Answers.C}}</label><br/>
+                 <input type="radio" name="answer" value="D" id="question{{@index}}"><label for="{{@index}}">{{Answers.D}}</label><br/>
+               </ul>
+
+               {{/data}}
+
+               <button type="submit" class="quizsubmit">
+                 submit
+               </button>
+             </form>
 
              <br><br>
            </div>

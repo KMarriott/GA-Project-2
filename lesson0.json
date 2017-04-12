@@ -1,5 +1,5 @@
 {
-	"id": 1,
+	"id": 2,
 	"Lesson": {
 		"pages" : 
 		{
@@ -31,34 +31,40 @@
 		"quiz" : {
 			"question0" : {
 				"Question" : "When practicing mindfulness, what’s the best posture to adopt?",
-				"Answers" : [
-					"Sitting upright", 
-					"Lying down on your back",
-					"Standing up",
-					"All of the above"
-				],
+				"Number": 1,
+				"Answers" : {
+					"A" :"Sitting upright", 
+					"B" :"Lying down on your back",
+					"C" :"Standing up",
+					"D" :"All of the above"
+				},
+				"correct": "A",
 				"last": false
 
 			},
 			"question1" : {
 				"Question" : "What is the best advice for a beginner?",
-				"Answers" : [
-					"Note all of the sensations you experience",
-					"Listen to loud rock music on some headphones",
-					"Try your hardest to relax",
-					"Practice mindfulness after a heavy meal"
-				],
+				"Number": 2,
+				"Answers" : {
+					"A" :"Note all of the sensations you experience",
+					"B" :"Listen to loud rock music on some headphones",
+					"C" :"Try your hardest to relax",
+					"D" :"Practice mindfulness after a heavy meal"
+				},
+				"correct": "A",
 				"last": false
 
 			},
-			"question0" : {
+			"question2" : {
 				"Question" : "To become a better practitioner of mindfulness, you must",
-				"Answers" : [
-					"Make each session last a minimum of an hour",
-					"Practice regularly",
-					"Do something energetic immediately after a session",
-					"Aim to fall asleep during practice"
-				],
+				"Number": 3,
+				"Answers" : {
+					"A" :"Make each session last a minimum of an hour",
+					"B" :"Practice regularly",
+					"C" :"Do something energetic immediately after a session",
+					"D" :"Aim to fall asleep during practice"
+				},
+				"correct": "A",
 				"last": false
 			}	
 		}

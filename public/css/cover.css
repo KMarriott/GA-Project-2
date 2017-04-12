@@ -2,18 +2,22 @@
  * Globals
  */
 
-.profile ul, .lessons ul{
+
+ .profile ul, .lessons ul{
   list-style-type: none;
 }
 
- /* Links */
- a,
- a:focus,
- a:hover {
+/* Links */
+a,
+a:focus,
+a:hover {
   color: #fff;
 }
 
 /* Custom default button */
+
+
+
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -71,6 +75,7 @@ body {
 .adduser, .updateuser{
   visibility: hide;
 }
+
 
 
 
@@ -180,3 +185,38 @@ body {
 }
 
 
+.profileimage{
+  width: 33%;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.imagebtn, .updatebtn{
+  width: 33%;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.default_width_btn{
+  width: 33%;
+}
+
+.topbtn{
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.botbtn{
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.update_container {
+  margin: auto;
+}
+
+/*.btn {
+  border-color: #000;
+  border-style: solid;
+}*/

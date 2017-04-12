@@ -1,5 +1,5 @@
 {
-  "name": "auth",
+  "name": "project2",
   "version": "1.0.0",
   "description": "Auth stuff.",
   "main": "app.js",
@@ -20,5 +20,14 @@
     "method-override": "^2.3.8",
     "mustache-express": "^1.2.2",
     "pg-promise": "^5.2.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KMarriott/GA-Project-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KMarriott/GA-Project-2/issues"
+  },
+  "homepage": "https://github.com/KMarriott/GA-Project-2#readme"
 }
